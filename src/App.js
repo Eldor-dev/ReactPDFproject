@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+// import { MyDocument, PDF } from "./components/PDFFile";
 
-function App() {
+import { Document, PDFDownloadLink, PDFViewer, StyleSheet } from "@react-pdf/renderer";
+import { MyDocument } from "./components/PDFFile";
+
+const styles = StyleSheet.create({
+  viewer: {
+    display: "flex",
+    textAlign: "center",
+    margin: "auto",
+    width: "100%",
+    height: "100vh",
+  },
+});
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // <PDFPage />
+    // <div className="App">
+    //   {/* <PDFDownloadLink document={<MyDocument />} fileName="FORM.pdf">
+    //     {/* {({ loading }) => (loading ? <button>Loading Document...</button> : <button>Download</button>)} */}
+    //     {({ blob, url, loading, error }) => (loading ? "Loading document..." : "Download now!")}
+    //   </PDFDownloadLink>
+    // </div> */}
+
+    <PDFViewer style={styles.viewer}>
+      <MyDocument />
+    </PDFViewer>
   );
 }
 

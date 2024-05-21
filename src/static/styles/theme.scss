@@ -1,0 +1,8 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+  @include media-breakpoint-down(md) {
+    font-size: 14px;
+  }
+}
