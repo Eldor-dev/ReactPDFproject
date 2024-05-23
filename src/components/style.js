@@ -28,9 +28,9 @@ export const styles = {
     flex: "1",
     width: "402px",
     height: "348px",
-    fontFamily: "Noto Sans",
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
     // backgroundColor: "#00CB22",
-    // fontFamily: "Noto Sans",
   },
   textFirst: {
     top: "44.01px",
@@ -59,7 +59,7 @@ export const styleHeader = {
   header: {
     width: "100%",
     // height: "44px",
-    padding: "10px, 20px, 10px, 20px",
+    // padding: "10px, 20px, 10px, 20px",
     marginBottom: "10px",
   },
   image: {
@@ -109,46 +109,39 @@ export const styleLayout = {
   layoutTwoColumn: {
     display: "flex",
     gap: "40px",
+    marginTop: "30px",
     flexDirection: "row",
     width: "363px",
     height: "100%",
-    // backgroundColor: "red",
   },
   layoutTwoColumnContent: {
     flex: "1",
-    // backgroundColor: "green",
   },
 };
 
 // Style Text
 export const styleText = {
   headerText: {
-    fontFamily: "Noto Sans",
+    fontFamily: "Noto Sans KR",
     fontSize: "19px",
-    fontWeight: "700",
+    fontWeight: "400",
     color: "#1D1D1F",
     marginBottom: "20px",
-    // lineHeight: "22.93px",
-    // marginTop: "20px",
-    // backgroundColor: "blue",
-    // width: "fit-content",
-    // height: "fit-content",
-
-    // marginLeft: "40px",
-    // text-align: left;
   },
   titleDark: {
-    fontFamily: "Noto Sans",
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
     fontSize: "12px",
-    fontWeight: "700",
+    fontWeight: "400",
     color: "#1D1D1F",
     // lineHeight: "14.32px",å
     marginTop: "0px",
   },
   titleDarkGray: {
-    fontFamily: "Noto Sans",
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
     fontSize: "12px",
-    fontWeight: "700",
+    fontWeight: "400",
     color: "#6E6E73",
     marginTop: "0px",
     marginBottom: "10px",
@@ -157,22 +150,24 @@ export const styleText = {
     width: "100px",
     height: "13px",
   },
-  textDarkGray: {
-    fontFamily: "Noto Sans",
+  textDark: {
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
     fontSize: "9px",
     fontWeight: "400",
-    color: "#6E6E73",
+    color: "#1D1D1F",
     marginTop: "0px",
     marginBottom: "10px",
     // width: "100%",
     textAlign: "justify",
   },
   textBrandText: {
-    fontFamily: "Noto Sans",
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
     fontSize: "9px",
     fontWeight: "400",
     color: "#01AF9C",
-    marginTop: "0",
+    marginTop: "20px",
     marginBottom: "10px",
     // width: "100%",
     textAlign: "justify",
@@ -184,7 +179,7 @@ export const styleText = {
 export const styleList = {
   container: {
     marginTop: "10px",
-    marginBottom: "0",
+    marginBottom: "10px",
     // backgroundColor: "green",
   },
   title: {
@@ -197,18 +192,77 @@ export const styleList = {
     color: "#FF382B",
     fontSize: "13px",
     // width: "2.93px",
+    // left: "3.15px",
     // height: "2.93px",
     // top: "3.15px",
-    // left: "3.15px",
   },
   titleText: {
-    fontFamily: "Noto Sans",
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
     fontSize: "9px",
-    fontWeight: "700",
+    fontWeight: "400",
     color: "#FF382B",
     marginTop: "0px",
     marginBottom: "0px",
     // width: "100%",
     textAlign: "justify",
+  },
+  text: {
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
+    fontSize: "9px",
+    fontWeight: "400",
+    color: "#1D1D1F",
+    marginTop: "0px",
+    marginBottom: "0px",
+    // width: "100%",
+    textAlign: "justify",
+    marginLeft: "10px",
+    marginBottom: "0",
+  },
+};
+
+export const styleOrderedText = {
+  container: {
+    width: "100%",
+    height: "100%",
+    marginTop: "20px",
+    marginBottom: "20px",
+    gap: "10px",
+  },
+  content: {
+    display: "flex",
+    flexDirection: "row",
+    // gap: "5px",
+    // marginBottom: "0",
+  },
+  bullet: {
+    height: "100%",
+    // color: "#FF382B",
+    fontSize: "13px",
+    // width: "2.93px",
+    // height: "2.93px",
+    // top: "3.15px",
+    // left: "3.15px",
+  },
+  titleText: {
+    // fontFamily: "Noto Sans KR",
+    fontFamily: "Noto Sans KR",
+    fontSize: "9px",
+    fontWeight: "400",
+    color: "#1D1D1F",
+    marginTop: "0px",
+    marginBottom: "0px",
+    // width: "100%",
+    textAlign: "justify",
+  },
+};
+
+export const styleBox = {
+  box: {
+    border: "1px solid #6E6E73",
+    borderRadius: "15px",
+    padding: "10px",
+    marginTop: "30px",
   },
 };
