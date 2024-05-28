@@ -27,3 +27,14 @@ export const fifthPageData = [
   { title: "창의적인 분야", text: "광고 크리에이티브 디렉터, 게임 디자이너, 예술가 등 창의력을 발휘하고 새로운 것을 만들어내는 직업에 적합합니다." },
   { title: "위기 관리 및 대응", text: "위기관리 전문가, 소방관, 경찰 등 긴박한 상황에서 빠른 판단과 행동이 요구되는 직업에서 강점을 보입니다." },
 ];
+
+export const sliderFirstData = [
+  { percentage: 60, label: "H" },
+  { percentage: 70, label: "M" },
+  { percentage: 80, label: "L" },
+];
+export const sliderSecondData = [
+  { percentage: 90, label: "L" },
+  // { percentage: 95, label: "L" },
+  // { percentage: 100, label: "L" },
+];

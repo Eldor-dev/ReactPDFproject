@@ -1,7 +1,7 @@
 import { React } from "react";
-import { Document, Page, Text, View, StyleSheet, Image, Font, Tspan, Svg } from "@react-pdf/renderer";
+import { Document, Page, Text, View, StyleSheet, Image, Font, Tspan, Svg, Circle } from "@react-pdf/renderer";
 
-import { secondPageData, thirdPageData, forthPageData, fifthPageData } from "../data/data";
+import { secondPageData, thirdPageData, forthPageData, fifthPageData, sliderFirstData, sliderSecondData } from "../data/data";
 import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox } from "./style.js";
 import pdfFrame from "../static/images/pdf_frame.png";
 import pdfFrameWhite from "../static/images/pdf_frame_white.png";
@@ -13,6 +13,10 @@ import pdfEmoji5 from "../static/images/pdf_emoji5.png";
 import pdfEmoji6 from "../static/images/pdf_emoji6.png";
 import pdfEmoji7 from "../static/images/pdf_emoji7.png";
 import pdfEmoji8 from "../static/images/pdf_emoji8.png";
+import pdfEmoji9 from "../static/images/pdf_emoji9.png";
+import pdfEmoji10 from "../static/images/pdf_emoji10.png";
+import pdfFrame1 from "../static/images/pdf_frame1.png";
+import pdfCopyright from "../static/images/pdf_copyright.png";
 import "./style.js";
 
 // Register Font
@@ -58,16 +62,112 @@ const OrderedText = ({ title, color }) => {
   );
 };
 
+const Slider = ({ percentage, label }) => {
+  let sliderWidth = 0;
+
+  if (percentage < 3) {
+    sliderWidth = percentage + 11;
+  } else if (percentage >= 3 && percentage < 6) {
+    sliderWidth = percentage + 10.5;
+  } else if (percentage >= 6 && percentage < 9) {
+    sliderWidth = percentage + 10;
+  } else if (percentage >= 9 && percentage < 12) {
+    sliderWidth = percentage + 9.5;
+  } else if (percentage >= 12 && percentage < 15) {
+    sliderWidth = percentage + 9;
+  } else if (percentage >= 15 && percentage < 20) {
+    sliderWidth = percentage + 8;
+  } else if (percentage >= 20 && percentage < 25) {
+    sliderWidth = percentage + 7;
+  } else if (percentage >= 25 && percentage < 30) {
+    sliderWidth = percentage + 6;
+  } else if (percentage >= 30 && percentage < 40) {
+    sliderWidth = percentage + 5;
+  } else if (percentage >= 40 && percentage < 50) {
+    sliderWidth = percentage + 4;
+  } else if (percentage >= 50 && percentage < 60) {
+    sliderWidth = percentage + 3;
+  } else if (percentage >= 60 && percentage < 70) {
+    sliderWidth = percentage + 2;
+  } else if (percentage >= 70 && percentage < 80) {
+    sliderWidth = percentage + 1;
+  } else if (percentage >= 80) {
+    sliderWidth = percentage;
+  }
+
+  console.log(sliderWidth);
+
+  return (
+    <View style={styles.sliderContent}>
+      <View style={styles.sliderContent_text}>
+        <Text>자극추구</Text>
+        <Text style={{ textAlign: "end" }}>{`${percentage}%`}</Text>
+      </View>
+      <View style={styles.sliderContent_slider}>
+        <View style={[styles.sliderContent_slider_color, { width: `${sliderWidth}%` }]}>
+          <View style={styles.sliderContent_slider_circle}>
+            <View style={styles.sliderContent_slider_circle_label}>
+              <Text style={styles.sliderContent_slider_circle_label_text}>{label}</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+};
+
 // Create Document Component
 export const MyDocument = () => (
   <Document>
     <Page style={styles.page}>
-      <View style={styles.viewFirst}>
-        <Image style={styles.image} src={pdfFrame} />
+      <View style={styles.greenBackground}>
+        <Image style={styles.greenBackgroundImage} src={pdfFrame} />
       </View>
-      <View style={styles.viewSecond}>
-        <Text style={{ fontFamily: "Noto Sans KR", fontWeight: "400" }}>안녕하세요.</Text>
-        <Text style={{ fontFamily: "Noto Sans KR" }}>겁이 없는 수련자</Text>
+      <View style={styles.mainPageLayout}>
+        <Text style={styles.mainPageHeaderText}>안녕하세요.</Text>
+        <Text style={[styles.mainPageGradientText, { backgroundClip: "linear-gradient(#f67a36,#ed008c)" }]}>
+          겁이 없는 수련자<Tspan style={{ color: "1D1D1F" }}>{`  전성윤.`}</Tspan>
+        </Text>
+        <Text style={styles.mainPageText}>당신의 기질과 성격에 대한 STC 테스트 해석 결과입니다.</Text>
+        <View style={styles.mainPageContent}>
+          <View style={styles.mainPageContent_boxOne}>
+            <Text style={{ fontSize: "6px", color: "#1D1D1F" }}>홍길동님은</Text>
+            <Text style={{ fontSize: "12px", color: "#00CBA1" }}>겁이 없는 수련자</Text>
+            <Image style={{ border: "none", overflow: "hidden", backgroundColor: "white", margin: "0" }} src={pdfFrame1} />
+            <Text style={styles.mainPageContent_boxOne_atSign}>{`Copyright \u0040 STC Test.`}</Text>
+          </View>
+          <View style={styles.mainPageContent_boxTwo}>
+            <View style={styles.mainPageContent_boxTwo_content}>
+              <Image src={pdfEmoji9} style={{ width: "11px", height: "12px" }} />
+              <Text>불도저와 폭주기관차 사이</Text>
+              <View style={styles.sliderTitleContainer}>
+                <Text style={styles.sliderTitle}>
+                  겁이 없는<Tspan style={{ color: "1D1D1F" }}>{` 기질`}</Tspan>
+                </Text>
+              </View>
+              <View style={styles.sliderContainer}>
+                {sliderFirstData.map((item) => (
+                  <Slider percentage={item.percentage} label={item.label}></Slider>
+                ))}
+              </View>
+              <Text style={styles.sliderContent_TestDate}>테스트 일시: 2024.03.20</Text>
+            </View>
+            <View style={styles.mainPageContent_boxTwo_content}>
+              <Image src={pdfEmoji10} style={{ width: "11px", height: "12px" }} />
+              <Text>길을 잃은 항해사</Text>
+              <View style={styles.sliderTitleContainer}>
+                <Text style={styles.sliderTitle}>
+                  수련자<Tspan style={{ color: "1D1D1F" }}>{` 성격`}</Tspan>
+                </Text>
+              </View>
+              <View style={styles.sliderContainer}>
+                {sliderSecondData.map((item) => (
+                  <Slider percentage={item.percentage} label={item.label}></Slider>
+                ))}
+              </View>
+            </View>
+          </View>
+        </View>
       </View>
     </Page>
 
@@ -104,6 +204,7 @@ export const MyDocument = () => (
         </View>
       </View>
       <View style={styleLayout.layout}>
+        <View style={styleLayout.line}></View>
         <View style={styleLayout.layoutContainer}>
           <View style={styleLayout.layoutTitle}>
             <Text style={styleText.titleDark}>
@@ -157,6 +258,7 @@ export const MyDocument = () => (
         </View>
       </View>
       <View style={styleLayout.layout}>
+        <View style={styleLayout.line}></View>
         <View style={styleLayout.layoutContainer}>
           <View style={styleLayout.layoutTitle}>
             <Text style={styleText.titleDark}>
@@ -205,6 +307,7 @@ export const MyDocument = () => (
         </View>
       </View>
       <View style={styleLayout.layout}>
+        <View style={styleLayout.line}></View>
         <View style={styleLayout.layoutContainer}>
           <View style={styleLayout.layoutTitle}>
             <Text style={styleText.titleDark}>
@@ -250,6 +353,7 @@ export const MyDocument = () => (
         </View>
       </View>
       <View style={styleLayout.layout}>
+        <View style={styleLayout.line}></View>
         <View style={styleLayout.layoutContainer}>
           <View style={styleLayout.layoutTitle}>
             <Text style={styleText.titleDark}>
@@ -351,6 +455,7 @@ export const MyDocument = () => (
         </View>
       </View>
       <View style={styleLayout.layout}>
+        <View style={styleLayout.line}></View>
         <View style={styleLayout.layoutContainer}>
           <View style={styleLayout.layoutTitle}>
             <Text style={styleText.titleDark}>
