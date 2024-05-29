@@ -64,7 +64,7 @@ export const styles = {
     display: "flex",
     textAlign: "center",
     padding: "11px",
-    border: "0.2px solid grey",
+    border: "0.3px solid grey",
     borderRadius: "5px",
     // height: "170px",
   },
@@ -168,6 +168,48 @@ export const styles = {
   },
 };
 
+export const stylePageNumber = {
+  container: {
+    position: "absolute",
+    right: "0px",
+    top: "72px",
+    // transform: "rotate(-90deg)",
+    width: "25px",
+    height: "567px",
+    margin: "0px",
+    padding: "0",
+  },
+  textContainer: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    color: "#FFF",
+    alignItems: "center",
+    padding: "7px",
+    width: "25px",
+    height: "81px",
+    backgroundColor: "#D9D9D9",
+  },
+  arrow: {
+    position: "absolute",
+    left: "-4px",
+    transform: "rotate(45deg)",
+    width: "8px",
+    height: "8px",
+    backgroundColor: "#00CBA1",
+  },
+  text: {
+    flex: 1,
+    flexDirection: "column",
+    fontFamily: "Noto Sans KR",
+    fontSize: "7.5px",
+  },
+  number: {
+    fontSize: "11px",
+    margin: "0",
+    padding: "0",
+  },
+};
 export const styleHeader = {
   header: {
     width: "100%",
@@ -194,13 +236,7 @@ export const styleLayout = {
     width: "493px",
     height: "374px",
     marginBottom: "35px",
-    // backgroundColor: "green",
   },
-  // layoutHeader: {
-  //   // width: "181px",
-  //   // height: "40px",
-  //   backgroundColor: "yellow",
-  // },
   layoutContainer: {
     display: "flex",
     flexDirection: "row",

@@ -29,12 +29,22 @@ export const fifthPageData = [
 ];
 
 export const sliderFirstData = [
-  { percentage: 60, label: "H" },
-  { percentage: 70, label: "M" },
-  { percentage: 80, label: "L" },
+  { percentage: 1, label: "H" },
+  { percentage: 5, label: "M" },
+  { percentage: 8, label: "L" },
 ];
 export const sliderSecondData = [
-  { percentage: 90, label: "L" },
-  // { percentage: 95, label: "L" },
-  // { percentage: 100, label: "L" },
+  { percentage: 15, label: "L" },
+  // { percentage: 19, label: "L" },
+  // { percentage: 26, label: "L" },
+];
+
+export const pageNumber = [
+  { number: "01", text: "나의 유형 요약" },
+  { number: "02", text: "나의 유형 요약" },
+  { number: "03", text: "나의 유형 요약" },
+  { number: "04", text: "나의 유형 요약" },
+  { number: "05", text: "나의 유형 요약" },
+  { number: "06", text: "나의 유형 요약" },
+  { number: "07", text: "나의 유형 요약" },
 ];

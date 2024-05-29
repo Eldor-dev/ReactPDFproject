@@ -1,8 +1,8 @@
 import { React } from "react";
 import { Document, Page, Text, View, StyleSheet, Image, Font, Tspan, Svg, Circle } from "@react-pdf/renderer";
 
-import { secondPageData, thirdPageData, forthPageData, fifthPageData, sliderFirstData, sliderSecondData } from "../data/data";
-import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox } from "./style.js";
+import { secondPageData, thirdPageData, forthPageData, fifthPageData, sliderFirstData, sliderSecondData, pageNumber } from "../data/data";
+import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox, stylePageNumber } from "./style.js";
 import pdfFrame from "../static/images/pdf_frame.png";
 import pdfFrameWhite from "../static/images/pdf_frame_white.png";
 import pdfEmoji1 from "../static/images/pdf_emoji1.png";
@@ -95,8 +95,6 @@ const Slider = ({ percentage, label }) => {
     sliderWidth = percentage;
   }
 
-  console.log(sliderWidth);
-
   return (
     <View style={styles.sliderContent}>
       <View style={styles.sliderContent_text}>
@@ -111,6 +109,20 @@ const Slider = ({ percentage, label }) => {
             </View>
           </View>
         </View>
+      </View>
+    </View>
+  );
+};
+
+const VerticalText = ({ text, number, page, index }) => {
+  return (
+    <View style={index + 1 == page ? [stylePageNumber.textContainer, { backgroundColor: "#00CBA1" }] : stylePageNumber.textContainer}>
+      {index + 1 == page ? <Tspan style={stylePageNumber.arrow} /> : null}
+      <Text style={stylePageNumber.number}>{number}</Text>
+      <View style={stylePageNumber.text}>
+        {text.split("").map((char) => (
+          <Text>{char}</Text>
+        ))}
       </View>
     </View>
   );
@@ -133,7 +145,7 @@ export const MyDocument = () => (
           <View style={styles.mainPageContent_boxOne}>
             <Text style={{ fontSize: "6px", color: "#1D1D1F" }}>홍길동님은</Text>
             <Text style={{ fontSize: "12px", color: "#00CBA1" }}>겁이 없는 수련자</Text>
-            <Image style={{ border: "none", overflow: "hidden", backgroundColor: "white", margin: "0" }} src={pdfFrame1} />
+            <Image style={{ width: "100%" }} src={pdfFrame1} />
             <Text style={styles.mainPageContent_boxOne_atSign}>{`Copyright \u0040 STC Test.`}</Text>
           </View>
           <View style={styles.mainPageContent_boxTwo}>
@@ -175,7 +187,11 @@ export const MyDocument = () => (
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
-
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={1} index={index}></VerticalText>
+        ))}
+      </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>전성윤님의 유형 요약</Text>
 
@@ -233,6 +249,11 @@ export const MyDocument = () => (
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={2} index={index}></VerticalText>
+        ))}
+      </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>홍길동님의 강점과 약점</Text>
         <View style={styleLayout.layoutContainer}>
@@ -286,6 +307,11 @@ export const MyDocument = () => (
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={3} index={index}></VerticalText>
+        ))}
+      </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>전성윤님의 연인 관계</Text>
         <View style={styleLayout.layoutContainer}>
@@ -330,6 +356,11 @@ export const MyDocument = () => (
     <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
+      </View>
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={4} index={index}></VerticalText>
+        ))}
       </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>전성윤님의 연인 관계</Text>
@@ -377,6 +408,11 @@ export const MyDocument = () => (
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={5} index={index}></VerticalText>
+        ))}
+      </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>전성윤님의 연인 관계</Text>
         <View style={styleLayout.layoutContainer}>
@@ -406,6 +442,11 @@ export const MyDocument = () => (
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={6} index={index}></VerticalText>
+        ))}
+      </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>전성윤님의 연인 관계</Text>
         <View style={styleLayout.layoutContainer}>
@@ -434,6 +475,11 @@ export const MyDocument = () => (
     <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
+      </View>
+      <View style={stylePageNumber.container}>
+        {pageNumber.map((item, index) => (
+          <VerticalText text={item.text} number={item.number} page={7} index={index}></VerticalText>
+        ))}
       </View>
       <View style={styleLayout.layout}>
         <Text style={styleText.headerText}>전성윤님의 연인 관계</Text>
