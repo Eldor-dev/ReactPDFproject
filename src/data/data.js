@@ -1,3 +1,12 @@
+export const mainPageData = [
+  { title: "기질 유형 :", text: "정의로운 - HLL" },
+  { title: "성격 유형 :", text: "혁신가 - LLM" },
+  { title: "이 름 :", text: "전성윤" },
+  { title: "성 별 :", text: "남성" },
+  { title: "생년월일 :", text: "1995.01.09" },
+  { title: "국 적 :", text: "대한민국" },
+];
+
 export const secondPageData = [
   { title: "모험적인", text: "새로운 것에 대한 두려움이 없으며, 도전을 즐깁니다." },
   { title: "마이웨이", text: "자신만의 길을 가는 데 자신감을 가지고 있으며, 타인의 영향력에서 자유롭습니다." },
@@ -35,8 +44,8 @@ export const sliderFirstData = [
 ];
 export const sliderSecondData = [
   { percentage: 15, label: "L" },
-  // { percentage: 19, label: "L" },
-  // { percentage: 26, label: "L" },
+  { percentage: 19, label: "L" },
+  { percentage: 26, label: "L" },
 ];
 
 export const pageNumber = [

@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 // import { MyDocument, PDF } from "./components/PDFFile";
 
-import { Document, PDFDownloadLink, PDFViewer, StyleSheet } from "@react-pdf/renderer";
-import { MyDocument } from "./components/PDFFile";
+import { PDFViewer, StyleSheet } from "@react-pdf/renderer";
+import { PDFDocument } from "./pdfDocument/PDFDocument.js";
 
 const styles = StyleSheet.create({
   viewer: {
@@ -26,7 +26,7 @@ function App(props) {
     // </div> */}
 
     <PDFViewer style={styles.viewer}>
-      <MyDocument />
+      <PDFDocument />
     </PDFViewer>
   );
 }
