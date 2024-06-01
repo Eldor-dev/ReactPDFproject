@@ -49,11 +49,13 @@ export const sliderSecondData = [
 ];
 
 export const pageNumber = [
-  { number: "01", text: "나의 유형 요약" },
-  { number: "02", text: "나의 유형 요약" },
-  { number: "03", text: "나의 유형 요약" },
-  { number: "04", text: "나의 유형 요약" },
-  { number: "05", text: "나의 유형 요약" },
-  { number: "06", text: "나의 유형 요약" },
-  { number: "07", text: "나의 유형 요약" },
+  { number: "01", text: "테스트 알아보기" },
+  { number: "02", text: "기질과 성격" },
+  { number: "03", text: "지표별 점수" },
+  { number: "04", text: "유형 요약" },
+  { number: "05", text: "강점과 약점" },
+  { number: "06", text: "연인 관계" },
+  { number: "07", text: "친구 관계" },
+  { number: "08", text: "커리어" },
+  { number: "09", text: "나를 위한 조언" },
 ];

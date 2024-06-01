@@ -2,6 +2,7 @@ import { React } from "react";
 import { Document, Page, Text, View, Image, Font, Tspan } from "@react-pdf/renderer";
 
 import MainPage from "../pages/mainPage/MainPage.js";
+import FirstPage from "../pages/firstPage/FirstPage.js";
 import { ListItem, OrderedText, Slider, VerticalText } from "../components/components.js";
 import { secondPageData, thirdPageData, forthPageData, fifthPageData, pageNumber } from "../data/data.js";
 import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox, stylePageNumber } from "./style.js";
@@ -121,7 +122,8 @@ export const PDFDocument = () => (
       </View>
     </Page> */}
 
-    <Page style={styles.page} wrap={false}>
+    <FirstPage />
+    {/* <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
@@ -181,7 +183,7 @@ export const PDFDocument = () => (
           </View>
         </View>
       </View>
-    </Page>
+    </Page> */}
 
     <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
