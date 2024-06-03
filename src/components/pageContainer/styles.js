@@ -6,6 +6,7 @@ export const styles = {
     flexDirection: "row",
     width: "100%",
     height: "758px",
+    fontFamily: "Noto Sans KR",
   },
   mainContent: {
     width: "560px",
@@ -30,9 +31,8 @@ export const styles = {
   box: {
     width: "100%",
     backgroundColor: "#EBEBF0",
-    marginBottom: "1px",
+    marginBottom: "0.5px",
     fontWeight: "700",
-
     color: "#FFFFFF",
   },
   box_number: {
@@ -46,7 +46,6 @@ export const styles = {
   },
   box_text: {
     width: "7px",
-    // height: "54px",
     fontFamily: "Noto Sans KR",
     margin: "4px 10.5px 5px 10.5px",
     fontSize: "8px",
