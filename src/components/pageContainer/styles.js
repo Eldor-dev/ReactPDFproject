@@ -6,7 +6,6 @@ export const styles = {
     flexDirection: "row",
     width: "100%",
     height: "758px",
-    fontFamily: "Noto Sans KR",
   },
   mainContent: {
     width: "560px",
