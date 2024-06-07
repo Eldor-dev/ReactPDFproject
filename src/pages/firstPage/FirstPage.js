@@ -2,6 +2,7 @@ import { View, Text, Image } from "@react-pdf/renderer";
 
 import PageContainer from "../../components/pageContainer/PageContainer.js";
 
+import { firstPagePersonalityData, firstPageTemperamentData } from "../../data/data.js";
 import firstPage_image from "../../static/images/firstPage_image.png";
 import { styles } from "./styles.js";
 
@@ -45,9 +46,50 @@ function FirstPage() {
             <Image src={firstPage_image} style={styles.secondContainer_content_img} />
           </View>
         </View>
+        <View style={styles.thirdContainer}>
+          <Text style={styles.thirdContainer_title}>기질과 성격</Text>
+          <Text style={styles.thirdContainer_text}>
+            STC의 기질 유형과 성격 유형은 각각 3가지 지표로 구성되어 있습니다. 기질 유형은 '모험성', '조심성', '상호의존성'으로, 성격 유형은 '독립성', '관계성', '초현실성'으로 이루어져 있습니다. 각 지표는 여러 개의 하위 지표를 포함하고 있으며, STC의 지표와 하위 지표는 다음과 같습니다.
+          </Text>
+          <View style={styles.thirdContainer_content}>
+            <View style={styles.thirdContainer_content_table}>
+              <Text style={styles.thirdContainer_content_table_title}>기질의 하위 지표 테이블</Text>
+              <View style={styles.thirdContainer_content_table_content}>
+                {firstPageTemperamentData.map((item, index) => (
+                  <Table title={item.title} textData={item.textData} key={index} />
+                ))}
+              </View>
+            </View>
+            <View style={styles.thirdContainer_content_table}>
+              <Text style={styles.thirdContainer_content_table_title}>성격의 하위 지표 테이블</Text>
+              <View style={styles.thirdContainer_content_table_content}>
+                {firstPagePersonalityData.map((item, index) => (
+                  <Table title={item.title} textData={item.textData} key={index} />
+                ))}
+              </View>
+            </View>
+          </View>
+        </View>
       </View>
     </PageContainer>
   );
 }
 
 export default FirstPage;
+
+// Table component
+
+function Table({ title, textData }) {
+  return (
+    <View style={styles.table}>
+      <View style={styles.table_title}>
+        <Text>{title}</Text>
+      </View>
+      {textData.map((item, index) => (
+        <View style={index === 0 ? [styles.table_text, { border: "none" }] : styles.table_text} key={index}>
+          <Text>{item.text}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}

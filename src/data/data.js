@@ -1,3 +1,4 @@
+// Main Page data
 export const mainPageData = [
   { title: "기질 유형 :", text: "정의로운 - HLL" },
   { title: "성격 유형 :", text: "혁신가 - LLM" },
@@ -5,6 +6,19 @@ export const mainPageData = [
   { title: "성 별 :", text: "남성" },
   { title: "생년월일 :", text: "1995.01.09" },
   { title: "국 적 :", text: "대한민국" },
+];
+
+// First Page data
+export const firstPageTemperamentData = [
+  { title: "모험성", textData: [{ text: "탐험성" }, { text: "충동성" }, { text: "자제력 부족" }, { text: "비규범성" }] },
+  { title: "조심성", textData: [{ text: "불안감" }, { text: "안전지향성" }, { text: "낯가림" }, { text: "심리적 피로" }] },
+  { title: "상호의존성", textData: [{ text: "감정적 민감성" }, { text: "정서적 교감" }, { text: "애착" }, { text: "관계 의존성" }] },
+];
+
+export const firstPagePersonalityData = [
+  { title: "독립성", textData: [{ text: "주체성" }, { text: "목표지향성" }, { text: "자기확신" }, { text: "자기통제" }] },
+  { title: "관계성", textData: [{ text: "포용력" }, { text: "이해력" }, { text: "연대감" }, { text: "관용성" }, { text: "윤리성" }] },
+  { title: "초현실성", textData: [{ text: "초현실적 몰입" }, { text: "초자연성 자각" }] },
 ];
 
 export const secondPageData = [

@@ -6,6 +6,7 @@ import HeaderLogo from "../../components/headerBrand/HeaderBrand.js";
 import { styles } from "./styles.js";
 
 function PageContainer({ children, page }) {
+  console.log(page);
   return (
     <Page>
       <HeaderLogo />

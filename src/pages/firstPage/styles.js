@@ -79,4 +79,73 @@ export const styles = {
     width: "490px",
     height: "100%",
   },
+
+  // third container
+  thirdContainer: {
+    width: "100%",
+    height: "233px",
+    marginTop: "40px",
+    fontFamily: "Noto Sans KR",
+  },
+  thirdContainer_title: {
+    fontSize: "10px",
+    fontWeight: "500",
+  },
+  thirdContainer_text: {
+    fontSize: "9.5px",
+    fontWeight: "300",
+    marginTop: "10px",
+  },
+  thirdContainer_content: {
+    display: "flex",
+    flexDirection: "row",
+    // alignItems: "space-between",
+    justifyContent: "space-between",
+    marginTop: "20px",
+    width: "100%",
+    height: "146px",
+  },
+  thirdContainer_content_table: {
+    height: "100%",
+    width: "242px",
+  },
+  thirdContainer_content_table_title: {
+    fontSize: "10px",
+    fontWeight: "500",
+  },
+  thirdContainer_content_table_content: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    width: "100%",
+    // height: "100%",
+    marginTop: "10px",
+  },
+
+  // Table component styles
+  table: {
+    width: "74.17px",
+    backgroundColor: "#F5F5F7",
+    borderRadius: "5px",
+    padding: "0 5px 0 5px",
+  },
+  table_title: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "21px",
+    fontSize: "8px",
+    fontWeight: "500",
+    borderBottom: "0.75px solid #515154",
+  },
+  table_text: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "20px",
+    fontSize: "8px",
+    fontWeight: "300",
+    borderTop: "0.75px solid #D2D2D7",
+  },
 };
