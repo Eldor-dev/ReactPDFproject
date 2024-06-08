@@ -13,6 +13,13 @@ export const styles = {
     width: "100%",
     height: "299px",
     margin: "20px 0 20px 0",
+    gap: "10px",
+  },
+  line: {
+    width: "100%",
+    height: "1px",
+    backgroundColor: "#D2D2D7",
+    marginTop: "20px",
   },
 
   // DesctiptionComponent styles
@@ -22,7 +29,7 @@ export const styles = {
     alignItems: "center",
     width: "100%",
     height: "93px",
-    backgroundColor: "red",
+    // backgroundColor: "red",
   },
   box_title: {
     fontSize: "10px",
@@ -37,6 +44,7 @@ export const styles = {
     height: "40px",
     backgroundColor: "#F5F5F7",
     borderRadius: "100px",
+    padding: "0 10px 0 10px",
   },
   box_textContainer_lowBtn: {
     display: "flex",
@@ -49,5 +57,48 @@ export const styles = {
     fontWeight: "500",
     fontSize: "8px",
     color: "#FFFFFF",
+  },
+  box_textContainer_highBtn: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "52px",
+    height: "24px",
+    borderRadius: "100px",
+    backgroundColor: "#01AF9C",
+    fontWeight: "500",
+    fontSize: "8px",
+    color: "#FFFFFF",
+  },
+
+  box_textContainer_text: {
+    fontSize: "10px",
+    fontWeight: "500",
+  },
+  box_descriptionContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    // height: "20px",
+    padding: "0 5px 0 5px",
+  },
+  box_descriptionContainer_textLeft: {
+    fontSize: "8px",
+    fontWeight: "300",
+    width: "102px",
+    maxLines: "2",
+    textAlign: "left",
+  },
+  box_descriptionContainer_textRight: {
+    fontSize: "8px",
+    fontWeight: "300",
+    width: "102px",
+    maxLines: "2",
+    textAlign: "right",
+  },
+  box_descriptionContainer_img: {
+    width: "211px",
   },
 };

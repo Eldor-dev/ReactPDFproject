@@ -14,19 +14,53 @@ export const firstPageTemperamentData = [
   { title: "조심성", textData: [{ text: "불안감" }, { text: "안전지향성" }, { text: "낯가림" }, { text: "심리적 피로" }] },
   { title: "상호의존성", textData: [{ text: "감정적 민감성" }, { text: "정서적 교감" }, { text: "애착" }, { text: "관계 의존성" }] },
 ];
-
 export const firstPagePersonalityData = [
   { title: "독립성", textData: [{ text: "주체성" }, { text: "목표지향성" }, { text: "자기확신" }, { text: "자기통제" }] },
   { title: "관계성", textData: [{ text: "포용력" }, { text: "이해력" }, { text: "연대감" }, { text: "관용성" }, { text: "윤리성" }] },
   { title: "초현실성", textData: [{ text: "초현실적 몰입" }, { text: "초자연성 자각" }] },
 ];
 
-export const secondPageData = [
-  { title: "모험적인", text: "새로운 것에 대한 두려움이 없으며, 도전을 즐깁니다." },
-  { title: "마이웨이", text: "자신만의 길을 가는 데 자신감을 가지고 있으며, 타인의 영향력에서 자유롭습니다." },
-  { title: "자!기!주!장!", text: "자신의 생각과 의견을 명확하게 표현하며, 소신 있게 행동합니다." },
-  { title: "적극적인", text: "어려운 상황에서도 앞으로 나아가려는 강한 의지를 가지고 있습니다." },
+// First Page Part Two data
+export const firstPagePartTwoTemperamentData = [
+  { title: "모험성", text: "“새롭고 낯선 일에 마음이 끌리고 도전하는 성향”", textOfLow: "변화나 새로움보다 익숙함 추구, 높은 절제력과 통제 능력", textOfHigh: "타고난 호기심, 규칙이나 절제보다 나의 순간적 판단과 즐거움 " },
+  { title: "조심성", text: "“신중하고 섬세하면서 조심스러운 성향”", textOfLow: "낮은 불안과 걱정, 과감하고 대범한 행동, 높은 심리적 에너지", textOfHigh: "낯선 사람이나 상황에 대한 불안과 경계, 꼼꼼하고 차분함" },
+  { title: "상호의존성", text: "“다른 사람과의 연결을 중시하고 의지하는 성향”", textOfLow: "독립적이고 차가움, 친밀한 관계 에서도 자신만의 거리 유지", textOfHigh: "친밀하고 따듯한 관계 추구, 타인의 감정에 민감하고 의존적" },
 ];
+export const firstPagePartTwoPersonalityData = [
+  { title: "모험성", text: "“새롭고 낯선 일에 마음이 끌리고 도전하는 성향”", textOfLow: "변화나 새로움보다 익숙함 추구, 높은 절제력과 통제 능력", textOfHigh: "타고난 호기심, 규칙이나 절제보다 나의 순간적 판단과 즐거움 " },
+  { title: "조심성", text: "“신중하고 섬세하면서 조심스러운 성향”", textOfLow: "낮은 불안과 걱정, 과감하고 대범한 행동, 높은 심리적 에너지", textOfHigh: "낯선 사람이나 상황에 대한 불안과 경계, 꼼꼼하고 차분함" },
+  { title: "상호의존성", text: "“다른 사람과의 연결을 중시하고 의지하는 성향”", textOfLow: "독립적이고 차가움, 친밀한 관계 에서도 자신만의 거리 유지", textOfHigh: "친밀하고 따듯한 관계 추구, 타인의 감정에 민감하고 의존적" },
+];
+
+// Second Page data
+
+export const secondPageData = {
+  temperamentData: {
+    type: "정의로운 - HLL",
+    description: "“신중한 인생의 나침반: 세심하고 규율적인 당신”",
+    scale: [
+      { title: "모험성", level: "H", percentage: "70%" },
+      { title: "조심성", level: "L", percentage: "20%" },
+      { title: "상호의존성", level: "L", percentage: "28%" },
+    ],
+  },
+  personalityData: {
+    type: "혁신가 - LLM",
+    description: "“독특한 시각: 세상을 다르게 보는 당신”",
+    scale: [
+      { title: "독립성", level: "L", percentage: "9%" },
+      { title: "관계성", level: "L", percentage: "30%" },
+      { title: "관계성", level: "M", percentage: "50%" },
+    ],
+  },
+};
+
+// export const secondPageData = [
+//   { title: "모험적인", text: "새로운 것에 대한 두려움이 없으며, 도전을 즐깁니다." },
+//   { title: "마이웨이", text: "자신만의 길을 가는 데 자신감을 가지고 있으며, 타인의 영향력에서 자유롭습니다." },
+//   { title: "자!기!주!장!", text: "자신의 생각과 의견을 명확하게 표현하며, 소신 있게 행동합니다." },
+//   { title: "적극적인", text: "어려운 상황에서도 앞으로 나아가려는 강한 의지를 가지고 있습니다." },
+// ];
 
 export const thirdPageData = [
   { title: "연인 관계에서도 자유롭고 모험적인 태도를 보입니다." },
