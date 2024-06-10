@@ -1,4 +1,4 @@
-import { View, Text, Image, Tspan } from "@react-pdf/renderer";
+import { View, Text, Image, Tspan, Svg, Defs, Rect, LinearGradient, Stop } from "@react-pdf/renderer";
 
 import PageContainer from "../../components/pageContainer/PageContainer.js";
 
@@ -91,6 +91,75 @@ function DataDemonstrator({ type, description, scale }) {
 
 // Slider component
 
-function Slider() {
-  return <View style={styles.slider}></View>;
+function Slider({ title, level, percentage }) {
+  return (
+    <View style={styles.slider}>
+      <View style={styles.slider_header}>
+        <Text>{title}</Text>
+        <Text>{`${percentage}%`}</Text>
+      </View>
+      <View style={styles.slider_main}>
+        <View style={styles.slider_main_content}>
+          <GradientComponent title={title} level={level} percentage={percentage} />
+        </View>
+      </View>
+      <View style={styles.slider_footer}>
+        <Text>Low</Text>
+        <Text>Middle</Text>
+        <Text>High</Text>
+      </View>
+    </View>
+  );
+}
+
+// Gradient Component
+
+function GradientComponent({ level, percentage }) {
+  let sliderWidth = 0;
+
+  if (percentage > 90) {
+    sliderWidth = percentage - 9;
+  } else if (percentage > 80 && percentage <= 90) {
+    sliderWidth = percentage - 8;
+  } else if (percentage > 70 && percentage <= 80) {
+    sliderWidth = percentage - 7;
+  } else if (percentage > 60 && percentage <= 70) {
+    sliderWidth = percentage - 6;
+  } else if (percentage > 50 && percentage <= 60) {
+    sliderWidth = percentage - 5;
+  } else if (percentage > 40 && percentage <= 50) {
+    sliderWidth = percentage - 4;
+  } else if (percentage > 30 && percentage <= 40) {
+    sliderWidth = percentage - 3;
+  } else if (percentage > 20 && percentage <= 30) {
+    sliderWidth = percentage - 2;
+  } else if (percentage > 10 && percentage <= 20) {
+    sliderWidth = percentage - 1;
+  } else if (percentage > 5 && percentage <= 10) {
+    sliderWidth = percentage - 0.7;
+  } else if (percentage > 0 && percentage <= 5) {
+    sliderWidth = percentage - 0.03;
+  }
+
+  return (
+    <View style={styles.gradient}>
+      <View style={[styles.gradient_color, { width: `${sliderWidth}%` }]}>
+        <Svg>
+          <Defs>
+            <LinearGradient id="myLinearGradient">
+              <Stop offset="0%" stopColor="#00E6A5" />
+              <Stop offset="50%" stopColor="#00CBA1" />
+              <Stop offset="100%" stopColor="#01AF9C" />
+            </LinearGradient>
+          </Defs>
+          <Rect width={250} height={50} fill="url('#myLinearGradient')" />
+        </Svg>
+      </View>
+      <View style={level == "L" ? [styles.gradient_btn, { borderColor: "#00E6A5" }] : level == "M" ? [styles.gradient_btn, { borderColor: "#00CBA1" }] : [styles.gradient_btn, { borderColor: "#01AF9C" }]}>
+        <View style={level == "L" ? [styles.gradient_btn_content, { backgroundColor: "#00E6A5" }] : level == "M" ? [styles.gradient_btn_content, { backgroundColor: "#00CBA1" }] : [styles.gradient_btn_content, { backgroundColor: "#01AF9C" }]}>
+          <Text>{level}</Text>
+        </View>
+      </View>
+    </View>
+  );
 }

@@ -39,18 +39,18 @@ export const secondPageData = {
     type: "정의로운 - HLL",
     description: "“신중한 인생의 나침반: 세심하고 규율적인 당신”",
     scale: [
-      { title: "모험성", level: "H", percentage: "70%" },
-      { title: "조심성", level: "L", percentage: "20%" },
-      { title: "상호의존성", level: "L", percentage: "28%" },
+      { title: "모험성", level: "H", percentage: "70" },
+      { title: "조심성", level: "L", percentage: "20" },
+      { title: "상호의존성", level: "L", percentage: "28" },
     ],
   },
   personalityData: {
     type: "혁신가 - LLM",
     description: "“독특한 시각: 세상을 다르게 보는 당신”",
     scale: [
-      { title: "독립성", level: "L", percentage: "9%" },
-      { title: "관계성", level: "L", percentage: "30%" },
-      { title: "관계성", level: "M", percentage: "50%" },
+      { title: "독립성", level: "L", percentage: "9" },
+      { title: "관계성", level: "L", percentage: "30" },
+      { title: "관계성", level: "M", percentage: "50" },
     ],
   },
 };

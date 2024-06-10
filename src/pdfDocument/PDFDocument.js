@@ -5,6 +5,7 @@ import MainPage from "../pages/mainPage/MainPage.js";
 import FirstPage from "../pages/firstPage/FirstPage.js";
 import FirstPageSecondPart from "../pages/firstPageSecondPart/FirstPageSecondPart.js";
 import SecondPage from "../pages/secondPage/SecondPage.js";
+import ThirdPage from "../pages/thirdPage/ThirdPage.js";
 import { ListItem, OrderedText, Slider, VerticalText } from "../components/components.js";
 import { secondPageData, thirdPageData, forthPageData, fifthPageData, pageNumber } from "../data/data.js";
 import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox, stylePageNumber } from "./style.js";
@@ -73,6 +74,10 @@ Font.register({
 export const PDFDocument = () => (
   <Document>
     <MainPage />
+    <FirstPage />
+    <FirstPageSecondPart />
+    <SecondPage />
+    <ThirdPage />
     {/* <Page style={styles.page}>
       <View style={styles.greenBackground}>
         <Image style={styles.greenBackgroundImage} src={pdfFrame} />
@@ -125,8 +130,6 @@ export const PDFDocument = () => (
       </View>
     </Page> */}
 
-    <FirstPage />
-    <FirstPageSecondPart />
     {/* <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
@@ -189,7 +192,6 @@ export const PDFDocument = () => (
       </View>
     </Page> */}
 
-    <SecondPage />
     {/* <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
@@ -248,7 +250,7 @@ export const PDFDocument = () => (
         </View>
       </View>
     </Page> */}
-    <Page style={styles.page} wrap={false}>
+    {/* <Page style={styles.page} wrap={false}>
       <View style={styleHeader.header}>
         <Image style={styleHeader.image} src={pdfFrameWhite} />
       </View>
@@ -464,6 +466,6 @@ export const PDFDocument = () => (
           </View>
         </View>
       </View>
-    </Page>
+    </Page> */}
   </Document>
 );

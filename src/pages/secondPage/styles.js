@@ -15,7 +15,7 @@ export const styles = {
   firstContainer: {
     width: "100%",
     height: "375px",
-    marginTop: "40px",
+    marginTop: "30px",
   },
   firstContainer_text: {
     fontSize: "10px",
@@ -149,8 +149,84 @@ export const styles = {
   // Slider Component styles
 
   slider: {
+    display: "flex",
+    justifyContent: "space-between",
     width: "100%",
     height: "50px",
-    backgroundColor: "red",
+  },
+  slider_header: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    // height: "13px",
+    fontWeight: "500",
+    fontSize: "9px",
+  },
+  slider_main: {
+    display: "flex",
+    justifyContent: "center",
+    width: "100%",
+    height: "20px",
+    // backgroundColor: "blue",
+  },
+  slider_main_content: {
+    width: "100%",
+    height: "10px",
+    borderRadius: "8px",
+    backgroundColor: "#FFFFFF",
+  },
+
+  slider_footer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    // height: "10px",
+    fontWeight: "300",
+    fontSize: "8px",
+    color: "#8E8E93",
+  },
+
+  // Gradient Component
+  gradient: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    height: "100%",
+    borderRadius: "8px",
+  },
+
+  gradient_color: {
+    display: "flex",
+    flexDirection: "row",
+    borderTopLeftRadius: "8px",
+    borderBottomLeftRadius: "8px",
+    overflow: "hidden",
+    height: "100%",
+  },
+  gradient_btn: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    position: "fixed",
+    left: "-1px",
+    width: "20px",
+    height: "20px",
+    border: "0.91px solid #01AF9C",
+    borderRadius: "45.45px",
+    backgroundColor: "#FFFFFF",
+  },
+  gradient_btn_content: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "12.73px",
+    height: "12.73px",
+    borderRadius: "45.45px",
+    backgroundColor: "#01AF9C",
+    fontSize: "8px",
+    fontWeight: "700",
+    color: "#FFFFFF",
   },
 };
