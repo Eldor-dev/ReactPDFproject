@@ -197,4 +197,13 @@ export const styles = {
     backgroundColor: "#00CBA1",
     borderRadius: "100%",
   },
+
+  // Table footer styles
+  tableFooter: {
+    width: "100%",
+    fontSize: "8px",
+    fontWeight: "300",
+    marginTop: "7px",
+    color: "#6E6E73",
+  },
 };

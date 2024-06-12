@@ -6,19 +6,26 @@ import FirstPage from "../pages/firstPage/FirstPage.js";
 import FirstPageSecondPart from "../pages/firstPageSecondPart/FirstPageSecondPart.js";
 import SecondPage from "../pages/secondPage/SecondPage.js";
 import ThirdPage from "../pages/thirdPage/ThirdPage.js";
-import { ListItem, OrderedText, Slider, VerticalText } from "../components/components.js";
-import { secondPageData, thirdPageData, forthPageData, fifthPageData, pageNumber } from "../data/data.js";
-import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox, stylePageNumber } from "./style.js";
+import FourthPage from "../pages/fourthPage/FourthPage.js";
+import FifthPage from "../pages/fifthPage/FifthPage.js";
+import SixthPage from "../pages/sixthPage/SixthPag.js";
+import SeventhPage from "../pages/seventhPage/SeventhPage.js";
+import EighthPagePartOne from "../pages/eighthPagePartOne/EighthPagePartOne.js";
+import EighthPagePartTwo from "../pages/eighthPagePartTwo/EighthPagePartTwo.js";
+import NinthPage from "../pages/ninthPage/NinthPage.js";
+// import { ListItem, OrderedText, Slider, VerticalText } from "../components/components.js";
+// import { secondPageData, thirdPageData, forthPageData, fifthPageData, pageNumber } from "../data/data.js";
+// import { styles, styleHeader, styleLayout, styleList, styleText, styleOrderedText, styleBox, stylePageNumber } from "./style.js";
 
-import pdfFrameWhite from "../static/images/pdf_frame_white.png";
+// import pdfFrameWhite from "../static/images/pdf_frame_white.png";
 // import pdfEmoji1 from "../static/images/pdf_emoji1.png";
 // import pdfEmoji2 from "../static/images/pdf_emoji2.png";
 // import pdfEmoji3 from "../static/images/pdf_emoji3.png";
 // import pdfEmoji4 from "../static/images/pdf_emoji4.png";
-import pdfEmoji5 from "../static/images/pdf_emoji5.png";
-import pdfEmoji6 from "../static/images/pdf_emoji6.png";
-import pdfEmoji7 from "../static/images/pdf_emoji7.png";
-import pdfEmoji8 from "../static/images/pdf_emoji8.png";
+// import pdfEmoji5 from "../static/images/pdf_emoji5.png";
+// import pdfEmoji6 from "../static/images/pdf_emoji6.png";
+// import pdfEmoji7 from "../static/images/pdf_emoji7.png";
+// import pdfEmoji8 from "../static/images/pdf_emoji8.png";
 
 // import font from "https://cdnjs.cloudflare.com/ajax/libs/pretendard.otf";
 // import font from "../static/fonts/Pretendard-Regular.otf";
@@ -78,6 +85,13 @@ export const PDFDocument = () => (
     <FirstPageSecondPart />
     <SecondPage />
     <ThirdPage />
+    <FourthPage />
+    <FifthPage />
+    <SixthPage />
+    <SeventhPage />
+    <EighthPagePartOne />
+    <EighthPagePartTwo />
+    <NinthPage />
     {/* <Page style={styles.page}>
       <View style={styles.greenBackground}>
         <Image style={styles.greenBackgroundImage} src={pdfFrame} />

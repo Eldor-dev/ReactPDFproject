@@ -52,6 +52,9 @@ function ThirdPage() {
               ))}
             </View>
           </View>
+          <View style={styles.tableFooter}>
+            <Text>*모든 지표와 하위지표 점수는 OOO님 국적의 인구 분포에 따라 계산된 본인의 위치를 백분율로 나타낸 것입니다. </Text>
+          </View>
         </View>
       </View>
     </PageContainer>
