@@ -16,7 +16,7 @@ function FifthPage() {
     <PageContainer page={5}>
       <View style={styles.main}>
         <View style={styles.title}>
-          <Text>나의 유형 요약</Text>
+          <Text>나의 강점과 약점</Text>
         </View>
         <Container>
           <TitleHLL />

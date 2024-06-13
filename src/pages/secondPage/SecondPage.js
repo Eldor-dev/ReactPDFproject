@@ -3,7 +3,7 @@ import { View, Text, Image, Tspan, Svg, Defs, Rect, LinearGradient, Stop } from 
 import PageContainer from "../../components/pageContainer/PageContainer.js";
 
 import { secondPageData } from "../../data/data.js";
-import image from "../../static/images/pdf_secondPage_img.png";
+import image from "../../static/images/pdf_secondPage_img1.png";
 import { styles } from "./styles.js";
 
 function SecondPage() {

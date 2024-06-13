@@ -8,12 +8,14 @@ export const styles = {
     marginTop: "20px",
     fontWeight: "500",
     fontSize: "18px",
-    marginBottom: "20px",
+    marginBottom: "40px",
   },
   content_title: {
     width: "100%",
   },
   content_title_img: {
+    display: "flex",
+    justifyContent: "flex-start",
     width: "100px",
     height: "19px",
   },
@@ -53,11 +55,4 @@ export const styles = {
   list_title: {
     width: "100%",
   },
-  // list_text: {
-  //   fontSize: "10px",
-  //   fontWeight: "300",
-  //   color: "#1D1D1F",
-  //   marginTop: "5px",
-  //   marginLeft: "8px",
-  // },
 };

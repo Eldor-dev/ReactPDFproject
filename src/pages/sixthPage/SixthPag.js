@@ -6,7 +6,7 @@ import TitleHLL from "../../components/containerTitle/TitleHLL.js";
 import TitleLLM from "../../components/containerTitle/TitleLLM.js";
 import ContainerContent from "../../components/containerContent/ContainerContent.js";
 import emoji5 from "../../static/images/pdf_emoji5.png";
-import emoji6 from "../../static/images/pdf_emoji6.png";
+import emoji11 from "../../static/images/pdf_emoji11.png";
 
 import { sixthPageData } from "../../data/data.js";
 import { styles } from "./styles.js";
@@ -16,13 +16,13 @@ function SixthPage() {
     <PageContainer page={6}>
       <View style={styles.main}>
         <View style={styles.title}>
-          <Text>나의 유형 요약</Text>
+          <Text>나의 연인 관계</Text>
         </View>
         <Container>
           <TitleHLL />
           <ContainerContent>
             <View style={styles.content_title}>
-              <View style={[styles.content_title_img, { width: "90px" }]}>
+              <View style={[styles.content_title_img, { width: "80px" }]}>
                 <Image src={emoji5} />
               </View>
               <View style={styles.content_title_text}>
@@ -45,10 +45,13 @@ function SixthPage() {
           <ContainerContent>
             <View style={styles.content_title}>
               <View style={[styles.content_title_img, { width: "80px" }]}>
-                <Image src={emoji6} />
+                <Image src={emoji11} />
               </View>
               <View style={styles.content_title_text}>
-                <Text>{sixthPageData.personalityData.titleText}</Text>
+                <Text>
+                  {sixthPageData.personalityData.titleText}
+                  <Tspan>🙌</Tspan>
+                </Text>
               </View>
             </View>
             <View style={styles.content_main}>
