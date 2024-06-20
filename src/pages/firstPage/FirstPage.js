@@ -1,9 +1,8 @@
-import { View, Text, Image } from "@react-pdf/renderer";
+import { View, Text, Svg, Defs, LinearGradient, Stop, Rect, Tspan } from "@react-pdf/renderer";
 
 import PageContainer from "../../components/pageContainer/PageContainer.js";
 
 import { firstPagePersonalityData, firstPageTemperamentData } from "../../data/data.js";
-import firstPage_image from "../../static/images/firstPage_image.png";
 import { styles } from "./styles.js";
 
 function FirstPage() {
@@ -43,7 +42,78 @@ function FirstPage() {
             확인할 수 있습니다.
           </Text>
           <View style={styles.secondContainer_content}>
-            <Image src={firstPage_image} style={styles.secondContainer_content_img} />
+            <View style={styles.secondContainer_content_gradient}>
+              <View style={styles.secondContainer_content_gradient_color}>
+                <Svg>
+                  <Defs>
+                    <LinearGradient id="myLinearGradient">
+                      <Stop offset="0%" stopColor="#00E6A5" />
+                      <Stop offset="50%" stopColor="#00CBA1" />
+                      <Stop offset="100%" stopColor="#01AF9C" />
+                    </LinearGradient>
+                  </Defs>
+                  <Rect width={500} height={50} fill="url('#myLinearGradient')" />
+                </Svg>
+              </View>
+              <View style={[styles.secondContainer_content_gradient_circle, { left: "14%", borderColor: "#00E6A5" }]}>
+                <View style={[styles.secondContainer_content_gradient_circle_content, { backgroundColor: "#00E6A5" }]}>
+                  <Text>L</Text>
+                </View>
+              </View>
+              <View style={styles.secondContainer_content_gradient_border} />
+              <View style={[styles.secondContainer_content_gradient_circle, { left: "48%", borderColor: "#00CBA1" }]}>
+                <View style={[styles.secondContainer_content_gradient_circle_content, { backgroundColor: "#00CBA1" }]}>
+                  <Text>M</Text>
+                </View>
+              </View>
+              <View style={[styles.secondContainer_content_gradient_border, { left: "70%" }]} />
+              <View style={[styles.secondContainer_content_gradient_circle, { left: "82%", borderColor: "#01AF9C" }]}>
+                <View style={[styles.secondContainer_content_gradient_circle_content, { backgroundColor: "#01AF9C" }]}>
+                  <Text>H</Text>
+                </View>
+              </View>
+            </View>
+            <View style={styles.secondContainer_content_scale}>
+              <View style={[styles.secondContainer_content_scale_percentage, { marginLeft: "5px" }]}>
+                <Text>0%</Text>
+              </View>
+              <View style={styles.secondContainer_content_scale_line}>
+                <Tspan style={styles.secondContainer_content_scale_line_arrowLeft} />
+              </View>
+              <View style={styles.secondContainer_content_scale_level}>
+                <Text>Low</Text>
+              </View>
+              <View style={styles.secondContainer_content_scale_line}>
+                <Tspan style={styles.secondContainer_content_scale_line_arrowRight} />
+              </View>
+              <View style={styles.secondContainer_content_scale_percentage}>
+                <Text>30%</Text>
+              </View>
+              <View style={[styles.secondContainer_content_scale_line, { width: "67px" }]}>
+                <Tspan style={styles.secondContainer_content_scale_line_arrowLeft} />
+              </View>
+              <View style={styles.secondContainer_content_scale_level}>
+                <Text>Middle</Text>
+              </View>
+              <View style={[styles.secondContainer_content_scale_line, { width: "67px" }]}>
+                <Tspan style={styles.secondContainer_content_scale_line_arrowRight} />
+              </View>
+              <View style={styles.secondContainer_content_scale_percentage}>
+                <Text>70%</Text>
+              </View>
+              <View style={[styles.secondContainer_content_scale_line, { width: "40px" }]}>
+                <Tspan style={styles.secondContainer_content_scale_line_arrowLeft} />
+              </View>
+              <View style={styles.secondContainer_content_scale_level}>
+                <Text>High</Text>
+              </View>
+              <View style={[styles.secondContainer_content_scale_line, { width: "40px" }]}>
+                <Tspan style={styles.secondContainer_content_scale_line_arrowRight} />
+              </View>
+              <View style={styles.secondContainer_content_scale_percentage}>
+                <Text>100%</Text>
+              </View>
+            </View>
           </View>
         </View>
         <View style={styles.thirdContainer}>
